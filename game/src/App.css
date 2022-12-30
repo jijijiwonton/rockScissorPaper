@@ -9,8 +9,10 @@
 .box {
   border: 10px solid black;
   width: 500px;
+  height: 500px;
 }
 
 .object {
   width: 500px;
+  height: 400px;
 }
