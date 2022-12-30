@@ -14,10 +14,22 @@ import Box from './Components/Box';
  */
 function App() {
   return (
-    <div className="container">
-      <Box />
-      <Box />
-    </div>
+    <>
+      <div className="container">
+        {' '}
+        <h1 className="author">Jiwon Hwang</h1>
+      </div>
+      <div className="container">
+        <Box target="YOU" />
+        <Box target="COMPUTER" />
+      </div>
+
+      <div className="container">
+        <button>Rock</button>
+        <button>Scissor</button>
+        <button>Button</button>
+      </div>
+    </>
   );
 }
 

@@ -3,11 +3,9 @@
    vertical to horizontal
    */
   display: flex;
-  padding-top: 80px;
   justify-content: center;
-  justify-content: space-around;
+  padding: 20px;
 }
-
 .box {
   border: 10px solid black;
   width: 500px;
