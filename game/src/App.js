@@ -34,9 +34,22 @@ const choice = {
 function App() {
   const [userSelect, setUserSelect] = useState(null);
 
+  const [randomSelect, setRandomSelect] = useState(null);
+
   const playGame = (userChoice) => {
     setUserSelect(choice[userChoice]);
+
+    let cpChoice = randomChoice();
+    setRandomSelect(cpChoice);
   };
+
+  const randomChoice = () => {
+    let itemArray = Object.keys(choice);
+    let randomItem = Math.floor(Math.random() * itemArray.length);
+    let final = itemArray[randomItem];
+    return choice[final];
+  };
+
   return (
     <>
       <div className="container">
@@ -45,7 +58,7 @@ function App() {
       </div>
       <div className="container">
         <Box target="YOU" item={userSelect} />
-        {/* <Box target="COMPUTER" /> */}
+        <Box target="COMPUTER" item={randomSelect} />
       </div>
 
       <div className="container">
