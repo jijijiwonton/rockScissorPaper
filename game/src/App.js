@@ -36,11 +36,15 @@ function App() {
 
   const [randomSelect, setRandomSelect] = useState(null);
 
+  const [result, setResult] = useState(null);
+
   const playGame = (userChoice) => {
     setUserSelect(choice[userChoice]);
 
     let cpChoice = randomChoice();
     setRandomSelect(cpChoice);
+    let result = proceedResult(choice[userChoice], cpChoice);
+    setResult(result);
   };
 
   const randomChoice = () => {
@@ -50,6 +54,21 @@ function App() {
     return choice[final];
   };
 
+  const proceedResult = (user, computer) => {
+    user = user.name;
+    computer = computer.name;
+
+    if (user === computer) {
+      return 'Tie';
+    } else if (user === 'Rock') {
+      return computer === 'Scissors' ? 'Win!' : 'Defeat!';
+    } else if (user === 'Scissors') {
+      return computer === 'Paper' ? 'Win!' : 'Defeat!';
+    } else if (user === 'Paper') {
+      return computer === 'Rock' ? 'Win!' : 'Defeat!';
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -57,8 +76,8 @@ function App() {
         <h1 className="author">Jiwon Hwang</h1>
       </div>
       <div className="container">
-        <Box target="YOU" item={userSelect} />
-        <Box target="COMPUTER" item={randomSelect} />
+        <Box target="YOU" item={userSelect} result={result} />
+        <Box target="COMPUTER" item={randomSelect} result={result} />
       </div>
 
       <div className="container">
