@@ -32,6 +32,8 @@ const choice = {
 };
 
 function App() {
+  const win = 'win';
+  const defeat = 'defeat';
   // User select / Computer select
   const [userSelect, setUserSelect] = useState(null);
   const [randomSelect, setRandomSelect] = useState(null);
@@ -50,7 +52,7 @@ function App() {
     if (userResult.startsWith('T')) {
       setComputerResult(userResult);
     } else {
-      let computerResult = userResult.startsWith('W') ? 'Defeat!' : 'Win!';
+      let computerResult = userResult.startsWith('w') ? defeat : win;
       setComputerResult(computerResult);
     }
   };
@@ -69,11 +71,11 @@ function App() {
     if (user === computer) {
       return 'Tie';
     } else if (user === 'Rock') {
-      return computer === 'Scissors' ? 'Win!' : 'Defeat!';
+      return computer === 'Scissors' ? win : defeat;
     } else if (user === 'Scissors') {
-      return computer === 'Paper' ? 'Win!' : 'Defeat!';
+      return computer === 'Paper' ? win : defeat;
     } else if (user === 'Paper') {
-      return computer === 'Rock' ? 'Win!' : 'Defeat!';
+      return computer === 'Rock' ? win : defeat;
     }
   };
 

@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Box = (props) => {
+  const win = 'win';
+  const defeat = 'defeat';
   let result;
   if (props.target === 'YOU' && props.result !== 'Tie' && props.result !== '') {
-    result = props.result === 'Win!' ? 'win' : 'defeat';
+    result = props.result === win ? win : defeat;
   } else {
     result = props.result;
   }
