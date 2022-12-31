@@ -89,9 +89,30 @@ function App() {
       </div>
 
       <div className="container">
-        <button onClick={() => playGame('rock')}>Rock</button>
-        <button onClick={() => playGame('scissors')}>Scissor</button>
-        <button onClick={() => playGame('paper')}>Paper</button>
+        <button onClick={() => playGame('rock')}>
+          {' '}
+          <img
+            className="icons"
+            src="https://img.icons8.com/ios-glyphs/512/rock.png"
+            alt="rock"
+          />
+        </button>
+        <button onClick={() => playGame('scissors')}>
+          {' '}
+          <img
+            className="icons"
+            src="https://img.icons8.com/ios-glyphs/512/hand-scissors.png"
+            alt="scissors"
+          />
+        </button>
+        <button onClick={() => playGame('paper')}>
+          {' '}
+          <img
+            className="icons"
+            src="https://img.icons8.com/ios-glyphs/512/matt-paper.png"
+            alt="paper"
+          />
+        </button>
       </div>
     </>
   );

@@ -4,7 +4,7 @@
    */
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 }
 .box {
   border: 10px solid black;
@@ -14,5 +14,27 @@
 
 .object {
   width: 500px;
-  height: 400px;
+  height: 330px;
+}
+
+.target,
+.result {
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  background: white;
+  width: 30px;
+  height: 30px;
+}
+
+.win {
+  border: 10px solid green;
+  color: green;
+}
+
+.defeat {
+  border: 10px solid red;
+  color: red;
 }
