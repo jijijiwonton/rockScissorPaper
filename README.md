@@ -13,4 +13,11 @@ We can see the game result as well :)</br>
 
 ## Running Application
 ```
+1. Clone the code into your local repository.
+2. Write 'npm install' in a command prompt
+3. Once it's done, write 'npm start'
+4. Enjoy it!
 ```
+
+## Live Demonstration
+![alt text](https://github.com/jijijiwonton/rockScissorPaper/blob/main/game/src/assets/image/liveDemo1.gif?raw=true)
